@@ -31,7 +31,7 @@ const LoginScreen = () => {
   </View>
       <View style={styles.inputContainer}>
         <TextInput
-          placeholder="Email"
+          placeholder="email"
           value={email}
           onChangeText={(text) => setEmail(text)}
           style={styles.input}
