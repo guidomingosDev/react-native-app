@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react';
 
 import {
     LogoImage,
@@ -33,8 +33,23 @@ import {
 
 }
     from '../components/home'
+    
+    const LoginScreen = ({ navigation }) => {
+        
+        const [email, setEmail] = useState('');
+        const [password, setPassword] = useState('');
+      
+        const handleLogin = () => {
+          console.log('Email:', email);
+          console.log('Password:', password);
+      
+          setEmail('');
+          setPassword('');
+      
+          navigation.navigate('Home');
+        };
+      
 
-const LoginScreen = () => {
     return (
         <Container>
             <KeyAbordingView behavior='padding'>
@@ -60,13 +75,12 @@ const LoginScreen = () => {
                             <Label>
                                 E-mail
                             </Label>
-                            <Input>
-                                <Content>
-                                    <Text>
-                                        exemplo@email.com.br
-                                    </Text>
-                                </Content>
-                            </Input>
+                            <Input 
+                                placeholder='exemplo@email.com.br'
+                                value={email}
+                                onChangeText={(text) => setEmail(text)}
+                            />
+
                         </InputWithLabel>
                     </InputField>
                     <InputField>
@@ -74,19 +88,17 @@ const LoginScreen = () => {
                             <Label>
                                 Senha
                             </Label>
-                            <Input>
-                                <Content>
-                                    <Text>
-                                        exemplo@email.com.br
-                                    </Text>
-                                </Content>
-                            </Input>
+                            <Input placeholder='Digite sua senha'
+                                secureTextEntry
+                                value={password}
+                                onChangeText={(text) => setPassword(text)}
+                            />
                         </InputWithLabel>
                     </InputField>
                 </LoginInput>
 
                 <Sign>
-                    <ButtonSign>
+                    <ButtonSign onPress={handleLogin}>
                         <ButtonBase>
                             <TextButtonSign>
                                 Entrar
@@ -106,7 +118,7 @@ const LoginScreen = () => {
                             source={require('../assets/SocialIcon.png')}
                         />
                         <TextGoogleSign>
-                        Sign in with Google
+                            Sign in with Google
                         </TextGoogleSign>
                     </SocialLoginButton>
 
@@ -130,4 +142,5 @@ const LoginScreen = () => {
 }
 
 export default LoginScreen
+
 

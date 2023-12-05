@@ -11,7 +11,7 @@ export const Colors = {
   green: '#10B981',
   red: '#EF4444',
   purple: '#871F78',
-  black: '#344054',
+  black: '#000000',
   gray:'#D0D5DD'
   
 };
@@ -39,14 +39,15 @@ export const KeyAbordingView = styled.KeyboardAvoidingView`
 export const LogoImage = styled.Image`
 width: 143px;
 height: 133px;
-margin-top: 50px
+margin-top: 60px;
+resize-mode: cover;
 `;
 
 export const ContainerTextLogin = styled.View`
 display: flex;
 margin-top: 40px;
 width: 100%;
-height: 25%;
+height: 23%;
 align-items: flex-start;
 align-self: stretch;
 `;
@@ -89,7 +90,7 @@ export const SubHeaderSubText = styled.View`
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 12px;
+gap: 35px;
 align-self: stretch;
 width: 100%;
 `;
@@ -98,6 +99,7 @@ export const LoginInput = styled.View`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
+margin-top: 25px;
 gap: 8px;
 align-self: stretch;
 `; 
@@ -137,7 +139,15 @@ border-radius: 8px;
 border: 1px solid;
 border-color: ${Colors.gray};
 background-color: ${Colors.primary};
-
+::placeholder{
+  flex: 1 0 0;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+color: ${Colors.gray};
+}
 `;
 
 export const Content = styled.View`
@@ -187,7 +197,7 @@ flex: 1 0 0;
 border-radius: 8px;
 border: 1px solid;
 border-color: ${Colors.gray};
-background: ${Colors.gray};
+background: ${Colors.black};
 `;
 
 export const TextButtonSign = styled.Text`
