@@ -179,7 +179,7 @@ line-height: 18px; /* 150% */
 
 export const TextPrincipal = styled.Text`
 align-self: stretch;
-color: ${Colors.gray};
+color: ${Colors.primary};
 margin-left: 5px;
 font-family: Inter;
 font-size: 13px;
@@ -211,11 +211,9 @@ align-items: flex-start;
 gap: 10px;
 align-self: stretch;
 border-radius: 8px;
-
 `;
 
 export const TextTrending = styled.Text`
-color: ${Colors.black};
 font-family: Inter;
 font-size: 17px;
 font-style: normal;
@@ -331,4 +329,96 @@ font-size: 13px;
 font-style: normal;
 font-weight: 600;
 line-height: 18px; /* 138.462% */
+`;
+
+
+export const ShoppingContainer = styled.View`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+`;
+
+export const ShoppingInnerContainer = styled.View`
+display: flex;
+width: 390px;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+background-color: ${Colors.primary};
+`;
+
+export const ShoppingLayout = styled.View`
+display: flex;
+padding: 0px 16px;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+border-radius: 8px;
+`;
+
+export const TextShopping = styled.Text`
+color: ${Colors.black};
+font-family: Inter;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 141.176% */
+`;
+
+export const ShoppingItensContainer = styled.View`
+display: flex;
+padding: 0px 16px;
+align-items: flex-start;
+gap: 16px;
+flex: 1 0 0;
+align-self: stretch;
+`;
+
+export const ItensContainer = styled.TouchableOpacity`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 4px;
+margin: 5px;
+`;
+
+export const ItensImages = styled.Image`
+border-radius: 8px;
+width: 130px;
+height: 130px;
+`;
+
+export const DescribeItemView = styled.View`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 4px;
+align-self: stretch;
+`;
+
+export const ItenText = styled.Text`
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+align-self: stretch;
+overflow: hidden;
+color: var(--Gray-1, #333);
+text-overflow: ellipsis;
+font-family: Inter;
+font-size: 13px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px; /* 138.462% */
+`;
+
+export const ValueItemText = styled.Text`
+color: var(--Gray-1, #333);
+text-align: center;
+/* Text xs/Medium */
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px; /* 150% */
 `;

@@ -32,7 +32,17 @@ import {
   BaseCategory2,
   BaseCategory3,
   BaseCategoryText,
-  DescribeCategoryText
+  DescribeCategoryText,
+  ShoppingContainer,
+  ShoppingInnerContainer,
+  ShoppingLayout,
+  TextShopping,
+  ShoppingItensContainer,
+  ItensContainer,
+  ItensImages,
+  DescribeItemView,
+  ItenText,
+  ValueItemText
 
 } from '../components/homeScreen'
 
@@ -48,6 +58,7 @@ const HomeScreen = () => {
 
   return (
     <Container>
+      <ScrollView vertical={true} showsHorizontalScrollIndicator={false}>
       <InnerContainer>
         <ContainerFilter>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
@@ -126,7 +137,6 @@ const HomeScreen = () => {
           </TrendingInnerContainer>
         </TrendingContainer>
         <TrendingVideosContainer>
-
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <VideoContainer>
 
@@ -134,63 +144,112 @@ const HomeScreen = () => {
                 source={require('../assets/bjjImage.jpg')}
               />
               <FrameLayout>
-              <RedirectTrendingVideo>
-                <BaseCategory1>
-                  <BaseCategoryText>
-                  Jiu-Jítsu
-                  </BaseCategoryText>
-                </BaseCategory1>
-                <DescribeCategoryText>
-                Jiu-Jitsu Hardcore: Dicas de finalização 
-                e controle no tatame
-                </DescribeCategoryText>
-              </RedirectTrendingVideo>
+                <RedirectTrendingVideo>
+                  <BaseCategory1>
+                    <BaseCategoryText>
+                      Jiu-Jítsu
+                    </BaseCategoryText>
+                  </BaseCategory1>
+                  <DescribeCategoryText>
+                    Jiu-Jitsu Hardcore: Dicas de finalização
+                    e controle no tatame
+                  </DescribeCategoryText>
+                </RedirectTrendingVideo>
               </FrameLayout>
-
-              
-
             </VideoContainer>
             <VideoContainer>
               <ImageVideo
                 source={require('../assets/mma.jpg')}
               />
-               <FrameLayout>
-              <RedirectTrendingVideo>
-                <BaseCategory2>
-                  <BaseCategoryText>
-                  MMA
-                  </BaseCategoryText>
-                </BaseCategory2>
-                <DescribeCategoryText>
-                Explosão de ação com os melhores nocautes do MMA
-                </DescribeCategoryText>
-              </RedirectTrendingVideo>
+              <FrameLayout>
+                <RedirectTrendingVideo>
+                  <BaseCategory2>
+                    <BaseCategoryText>
+                      MMA
+                    </BaseCategoryText>
+                  </BaseCategory2>
+                  <DescribeCategoryText>
+                    Explosão de ação com os melhores nocautes do MMA
+                  </DescribeCategoryText>
+                </RedirectTrendingVideo>
               </FrameLayout>
-              
             </VideoContainer>
             <VideoContainer>
               <ImageVideo
                 source={require('../assets/wrestling.jpg')}
               />
-            
-            <FrameLayout>
-              <RedirectTrendingVideo>
-                <BaseCategory3>
-                  <BaseCategoryText>
-                  Wrestling
-                  </BaseCategoryText>
-                </BaseCategory3>
-                <DescribeCategoryText>
-                Aprenda Wrestling com os melhores
-                </DescribeCategoryText>
-              </RedirectTrendingVideo>
+              <FrameLayout>
+                <RedirectTrendingVideo>
+                  <BaseCategory3>
+                    <BaseCategoryText>
+                      Wrestling
+                    </BaseCategoryText>
+                  </BaseCategory3>
+                  <DescribeCategoryText>
+                    Aprenda Wrestling com os melhores
+                  </DescribeCategoryText>
+                </RedirectTrendingVideo>
               </FrameLayout>
-
             </VideoContainer>
-
           </ScrollView>
         </TrendingVideosContainer>
+
+        <ShoppingContainer>
+          <ShoppingInnerContainer>
+            <ShoppingLayout>
+              <TextShopping>
+                Loja
+              </TextShopping>
+            </ShoppingLayout>
+          </ShoppingInnerContainer>
+        </ShoppingContainer>
+
+        <ShoppingItensContainer>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <ItensContainer>
+             <ItensImages
+              source={require('../assets/camiseta.png')}
+             />
+              <DescribeItemView>
+                <ItenText>
+                Camiseta 
+                </ItenText>
+                <ValueItemText>
+                  R$ 199,00
+                </ValueItemText>
+              </DescribeItemView>
+          </ItensContainer>
+          <ItensContainer>
+             <ItensImages
+              source={require('../assets/bone.png')}
+             />
+              <DescribeItemView>
+                <ItenText>
+                Bone CB
+                </ItenText>
+                <ValueItemText>
+                  R$ 199,00
+                </ValueItemText>
+              </DescribeItemView>
+          </ItensContainer>
+          <ItensContainer>
+             <ItensImages
+              source={require('../assets/moletom.png')}
+             />
+              <DescribeItemView>
+                <ItenText>
+                Moletom Feminino
+                </ItenText>
+                <ValueItemText>
+                  R$ 199,00
+                </ValueItemText>
+              </DescribeItemView>
+          </ItensContainer>
+          </ScrollView>
+        </ShoppingItensContainer>
+      
       </InnerContainer>
+      </ScrollView>
     </Container>
   )
 }
