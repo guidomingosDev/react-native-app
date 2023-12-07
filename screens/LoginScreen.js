@@ -32,7 +32,7 @@ import {
     TextGoogleSign
 
 }
-    from '../components/home'
+    from '../components/loginScreen'
     
     const LoginScreen = ({ navigation }) => {
         
