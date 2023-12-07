@@ -18,7 +18,21 @@ import {
   Dot,
   BasedLive,
   TextLive,
-  TextPrincipal
+  TextPrincipal,
+  TrendingContainer,
+  TrendingInnerContainer,
+  TrendingLayout,
+  TextTrending,
+  TrendingVideosContainer,
+  VideoContainer,
+  ImageVideo,
+  FrameLayout,
+  RedirectTrendingVideo,
+  BaseCategory1,
+  BaseCategory2,
+  BaseCategory3,
+  BaseCategoryText,
+  DescribeCategoryText
 
 } from '../components/homeScreen'
 
@@ -78,7 +92,7 @@ const HomeScreen = () => {
             </OptionsContainer>
           </ScrollView>
         </ContainerFilter>
-        
+
         <ContainerLive>
           <ContainerGroup>
             <ImageContainer>
@@ -88,12 +102,12 @@ const HomeScreen = () => {
             </ImageContainer>
             <ContainerInLive>
               <BasedLive>
-              <RedirectLive>
-                <Dot
-                  source={require('../assets/_Dot.jpg')}
-                />                
-                <TextLive>Ao vivo (89K)</TextLive>
-              </RedirectLive>
+                <RedirectLive>
+                  <Dot
+                    source={require('../assets/_Dot.jpg')}
+                  />
+                  <TextLive>Ao vivo (89K)</TextLive>
+                </RedirectLive>
               </BasedLive>
               <TextPrincipal>
                 Cage Talk: A força e a estratégia nos bastidores do MMA com Charlie Du Bronx
@@ -101,6 +115,81 @@ const HomeScreen = () => {
             </ContainerInLive>
           </ContainerGroup>
         </ContainerLive>
+
+        <TrendingContainer>
+          <TrendingInnerContainer>
+            <TrendingLayout>
+              <TextTrending>
+                Em alta
+              </TextTrending>
+            </TrendingLayout>
+          </TrendingInnerContainer>
+        </TrendingContainer>
+        <TrendingVideosContainer>
+
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <VideoContainer>
+
+              <ImageVideo
+                source={require('../assets/bjjImage.jpg')}
+              />
+              <FrameLayout>
+              <RedirectTrendingVideo>
+                <BaseCategory1>
+                  <BaseCategoryText>
+                  Jiu-Jítsu
+                  </BaseCategoryText>
+                </BaseCategory1>
+                <DescribeCategoryText>
+                Jiu-Jitsu Hardcore: Dicas de finalização 
+                e controle no tatame
+                </DescribeCategoryText>
+              </RedirectTrendingVideo>
+              </FrameLayout>
+
+              
+
+            </VideoContainer>
+            <VideoContainer>
+              <ImageVideo
+                source={require('../assets/mma.jpg')}
+              />
+               <FrameLayout>
+              <RedirectTrendingVideo>
+                <BaseCategory2>
+                  <BaseCategoryText>
+                  MMA
+                  </BaseCategoryText>
+                </BaseCategory2>
+                <DescribeCategoryText>
+                Explosão de ação com os melhores nocautes do MMA
+                </DescribeCategoryText>
+              </RedirectTrendingVideo>
+              </FrameLayout>
+              
+            </VideoContainer>
+            <VideoContainer>
+              <ImageVideo
+                source={require('../assets/wrestling.jpg')}
+              />
+            
+            <FrameLayout>
+              <RedirectTrendingVideo>
+                <BaseCategory3>
+                  <BaseCategoryText>
+                  Wrestling
+                  </BaseCategoryText>
+                </BaseCategory3>
+                <DescribeCategoryText>
+                Aprenda Wrestling com os melhores
+                </DescribeCategoryText>
+              </RedirectTrendingVideo>
+              </FrameLayout>
+
+            </VideoContainer>
+
+          </ScrollView>
+        </TrendingVideosContainer>
       </InnerContainer>
     </Container>
   )

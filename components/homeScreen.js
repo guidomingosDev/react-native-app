@@ -10,7 +10,9 @@ export const Colors = {
     red: '#EF4444',
     purple: '#871F78',
     black: '#000000',
-    gray:'#F2F2F2'
+    gray:'#F2F2F2',
+    orange: '#F2994A',
+    blue: '#2F80ED'
   };
 
 const { primary,black, gray, secondary, tertiary, darkLight, brand, green, red } = Colors;
@@ -120,7 +122,7 @@ flex: 1 0 0;
 align-self: stretch;
 `;
 
-export const ContainerInLive = styled.View`
+export const ContainerInLive = styled.TouchableOpacity`
 display: flex;
 position: absolute;
 width: 358px;
@@ -179,6 +181,151 @@ export const TextPrincipal = styled.Text`
 align-self: stretch;
 color: ${Colors.gray};
 margin-left: 5px;
+font-family: Inter;
+font-size: 13px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px; /* 138.462% */
+`;
+
+export const TrendingContainer = styled.View`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+`;
+
+export const TrendingInnerContainer = styled.View`
+display: flex;
+width: 390px;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+background-color: ${Colors.primary};
+`;
+
+export const TrendingLayout = styled.View`
+display: flex;
+padding: 0px 16px;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+border-radius: 8px;
+
+`;
+
+export const TextTrending = styled.Text`
+color: ${Colors.black};
+font-family: Inter;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 141.176% */
+`;
+
+export const TrendingVideosContainer = styled.View`
+display: flex;
+height: 248px;
+padding: 0px 16px;
+position: relative;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+`;
+
+export const VideoContainer = styled.View`
+display: flex;
+flex: 1;
+position: relative;
+width: 164px;
+height: 248px;
+flex-direction: column;
+justify-content: space-between;
+margin-left: 15px;
+align-items: center;
+border-radius: 16px;
+position: relative;
+background-color: ${Colors.red}
+`;
+
+export const ImageVideo = styled.Image`
+width: 100%;
+height: 100%;
+resize-mode: cover;
+border-radius: 16px;
+`;
+
+export const FrameLayout = styled.View`
+display: flex;
+width: 164px;
+height: 248px;
+padding: 8px;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 8px;
+flex-shrink: 0;
+border-radius: 16px;
+position: absolute;
+background: ${Colors.black};
+opacity: 0.66;
+`;
+
+export const RedirectTrendingVideo = styled.TouchableOpacity`
+display: flex;
+padding: 8px;
+position: absolute;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+height: 50%;
+align-self: stretch;
+border-radius: 8px;
+`;
+
+export const BaseCategory1 = styled.View`
+display: flex;
+padding: 2px 8px;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+background: ${Colors.green};
+`;
+
+export const BaseCategory2 = styled.View`
+display: flex;
+padding: 2px 8px;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+background: ${Colors.orange};
+`;
+
+export const BaseCategory3 = styled.View`
+display: flex;
+padding: 2px 8px;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+background: ${Colors.blue};
+`;
+
+export const BaseCategoryText = styled.Text`
+color: ${Colors.primary};
+text-align: center;
+/* Text xs/Medium */
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px; /* 150% */
+`;
+
+export const DescribeCategoryText = styled.Text`
+align-self: stretch;
+color: ${Colors.primary};
 font-family: Inter;
 font-size: 13px;
 font-style: normal;
