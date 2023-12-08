@@ -433,7 +433,7 @@ align-items: flex-end;
 align-self: stretch;
 border-radius: 24px 24px 0px 0px;
 background-color: ${Colors.primary};
-box-shadow: 0.3px 0px 0.3px black;
+box-shadow: 0.4px 0px 0.4px black;
 `;
 
 export const ItemBottomNavigation = styled.TouchableOpacity`
