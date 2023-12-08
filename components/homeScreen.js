@@ -12,10 +12,11 @@ export const Colors = {
     black: '#000000',
     gray:'#F2F2F2',
     orange: '#F2994A',
-    blue: '#2F80ED'
+    blue: '#2F80ED',
+    gray2: '#4F4F4F'
   };
 
-const { primary,black, gray, secondary, tertiary, darkLight, brand, green, red } = Colors;
+const { gray2, primary,black, gray, secondary, tertiary, darkLight, brand, green, red } = Colors;
 
 export const Container = styled.View`
 display: flex;
@@ -25,7 +26,7 @@ align-items: flex-start;
 gap: 10px;
 flex: 1 0 0;
 align-self: stretch;
-background-color: ${Colors.primary}
+background-color: ${Colors.primary};
 `;
 
 export const InnerContainer = styled.View`
@@ -241,7 +242,7 @@ width: 164px;
 height: 248px;
 flex-direction: column;
 justify-content: space-between;
-margin-left: 15px;
+margin-right: 19px;
 align-items: center;
 border-radius: 16px;
 position: relative;
@@ -263,7 +264,6 @@ padding: 8px;
 flex-direction: column;
 justify-content: flex-end;
 align-items: flex-start;
-gap: 8px;
 flex-shrink: 0;
 border-radius: 16px;
 position: absolute;
@@ -421,4 +421,72 @@ font-size: 12px;
 font-style: normal;
 font-weight: 500;
 line-height: 18px; /* 150% */
+`;
+
+export const Menu = styled.View`
+display: flex;
+padding: 16px;
+height: 10%;
+flex-direction: row;
+justify-content: center;
+align-items: flex-end;
+align-self: stretch;
+border-radius: 24px 24px 0px 0px;
+background-color: ${Colors.primary};
+box-shadow: 0.4px 0px 0.4px black;
+`;
+
+export const ItemBottomNavigation = styled.TouchableOpacity`
+display: flex;
+flex-direction: column;
+align-items: center;
+flex: 1 0 0;
+`;
+
+export const IconBottomNavigation = styled.Image`
+width: 27px;
+height: 27px;
+`;
+
+export const HomeBottomContainer = styled.View`
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 6px;
+flex: 1 0 0;
+`;
+
+export const HomeNavigation = styled.View`
+display: flex;
+padding: 10px;
+align-items: flex-start;
+paddin-top: 20px;
+border-radius: 100px;
+border: 4px solid;
+border-color: ${Colors.black};
+background: ${Colors.black};
+`;
+
+export const InnerHomeNavigation = styled.View`
+display: flex;
+width: 24px;
+height: 24px;
+justify-content: center;
+align-items: center;
+`;
+
+export const IconHomeNavigation = styled.Image`
+width: 24px;
+height: 24px;
+flex-shrink: 0;
+color: ${Colors.blue}
+`;
+
+export const TextItemNavigation = styled.Text`
+color: ${Colors.gray2};
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 133.333% */
 `;
