@@ -45,6 +45,7 @@ flex-direction: column;
 align-items: flex-start;
 gap: 10px;
 align-self: stretch;
+margin-top: 50px;
 `;
 
 export const OptionsContainer = styled.View`
@@ -99,6 +100,7 @@ height: 140px;
 padding: 0px 16px;
 align-items: flex-start;
 gap: 10px;
+margin-top: -30px;
 align-self: stretch;
 `;
 
@@ -433,7 +435,7 @@ align-items: flex-end;
 align-self: stretch;
 border-radius: 24px 24px 0px 0px;
 background-color: ${Colors.primary};
-box-shadow: 0.4px 0px 0.4px black;
+box-shadow: 0.4px -1px 0.4px ${Colors.secondary};
 `;
 
 export const ItemBottomNavigation = styled.TouchableOpacity`

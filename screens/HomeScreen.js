@@ -66,9 +66,7 @@ const HomeScreen = () => {
 
   return (
     <Container>
-      <ScrollView vertical={true} showsHorizontalScrollIndicator={false}>
-        <InnerContainer>
-          <ContainerFilter>
+       <ContainerFilter>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
               <OptionsContainer>
                 <BtnOption>
@@ -111,6 +109,9 @@ const HomeScreen = () => {
               </OptionsContainer>
             </ScrollView>
           </ContainerFilter>
+      <ScrollView vertical={true} showsHorizontalScrollIndicator={false}>
+        <InnerContainer>
+         
 
           <ContainerLive>
             <ContainerGroup>
