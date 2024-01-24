@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Platform } from 'react-native'
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
@@ -56,11 +57,18 @@ import {
 
 const HomeScreen = () => {
 
-  const [selectedItem, setSelectedItem] = useState('Todos');
+  const navigation = useNavigation();
+  const [selectedItem, setSelectedItem] = React.useState('Todos');
 
   const handleItemPress = (item) => {
-    console.log('Selected Item:', item);
     setSelectedItem(item);
+
+    if (item === 'Jiu-Jítsu') {
+      // Navegar para a tela desejada (ajuste conforme a estrutura do seu projeto)
+      navigation.navigate('Jiu-Jitsu');
+    }
+
+    // Adicione mais lógica conforme necessário para outras opções
   };
 
 
