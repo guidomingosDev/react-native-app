@@ -58,7 +58,16 @@ import {
     NameAthlete,
     AthleteName,
     Name,
-    NameText
+    NameText,
+    Lessons,
+    FilterComponent,
+    InputLabel,
+    Input,
+    Content,
+    TextInputView,
+    TextInnerInput,
+    DropDown,
+    DropDownIcon
 
 } from '../components/athleteVideoScreen'
 
@@ -125,7 +134,26 @@ const AthleteVideoScreen = () => {
                         </BtnOption>
                     </OptionsContainer>
                 </ContainerFilter>
-
+                <Lessons>
+                    <FilterComponent>
+                        <InputLabel>
+                            <Input>
+                                <Content>
+                                    <TextInputView>
+                                        <TextInnerInput>
+                                            Filtrar por...
+                                        </TextInnerInput>
+                                    </TextInputView>
+                                </Content>
+                                <DropDown>
+                                    <DropDownIcon
+                                        source={require('../assets/arrow-left.png')}
+                                    />
+                                </DropDown>
+                            </Input>
+                        </InputLabel>
+                    </FilterComponent>
+                </Lessons>
             </InnerContainer>
 
 
