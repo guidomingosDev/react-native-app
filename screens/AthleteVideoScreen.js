@@ -69,7 +69,7 @@ const AthleteVideoScreen = () => {
 
     const handleItemPress = (item) => {
         setSelectedItem(item);
-        if (item === 'Jiu-Jítsu') {
+        if (item === '') {
             navigation.navigate('Jiu-Jitsu');
         }
     };
@@ -80,9 +80,9 @@ const AthleteVideoScreen = () => {
             <InnerContainer>
                 <AthleteName>
                     <ArrowBackIcon>
-                    <ArrowBack
-                        source={require('../assets/arrow-left.png')}
-                    />
+                        <ArrowBack
+                            source={require('../assets/arrow-left.png')}
+                        />
                     </ArrowBackIcon>
                     <Name>
                         <NameText>
@@ -90,6 +90,42 @@ const AthleteVideoScreen = () => {
                         </NameText>
                     </Name>
                 </AthleteName>
+
+                <ContainerFilter>
+                    <OptionsContainer>
+                        <BtnOption>
+                            <ButtonText onPress={() => handleItemPress('Todos')}>
+                                <View style={selectedItem === 'Todos' ? { borderBottomWidth: 4, borderBottomColor: '#000000' } : {}}>
+                                    <LabelOption>
+                                        Todos
+                                    </LabelOption>
+                                </View>
+                            </ButtonText>
+                            <ButtonText onPress={() => handleItemPress('Básico')}>
+                                <View style={selectedItem === 'Básico' ? { borderBottomWidth: 4, borderBottomColor: '#000000' } : {}}>
+                                    <LabelOption>
+                                        Básico
+                                    </LabelOption>
+                                </View>
+                            </ButtonText>
+                            <ButtonText onPress={() => handleItemPress('Intermediário')}>
+                                <View style={selectedItem === 'Intermediário' ? { borderBottomWidth: 4, borderBottomColor: '#000000' } : {}}>
+                                    <LabelOption>
+                                        Intermediário
+                                    </LabelOption>
+                                </View>
+                            </ButtonText>
+                            <ButtonText onPress={() => handleItemPress('Avançado')}>
+                                <View style={selectedItem === 'Avançado' ? { borderBottomWidth: 4, borderBottomColor: '#000000', } : {}}>
+                                    <LabelOption>
+                                        Avançado
+                                    </LabelOption>
+                                </View>
+                            </ButtonText>
+                        </BtnOption>
+                    </OptionsContainer>
+                </ContainerFilter>
+
             </InnerContainer>
 
 
