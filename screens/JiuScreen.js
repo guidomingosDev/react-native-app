@@ -52,6 +52,10 @@ const JiuScreen = () => {
       }
     };
 
+    const goToClass = () =>{
+        navigation.navigate('AthleteVideo')
+    }
+
 
     return (
         <Container>
@@ -101,7 +105,6 @@ const JiuScreen = () => {
 
             <InnerContainer>
 
-
                 <ContainerLive>
                     <ContainerGroup>
                         <ImageContainer>
@@ -125,13 +128,11 @@ const JiuScreen = () => {
                     </ContainerGroup>
                 </ContainerLive>
                 <AthletesView>
-               
                     <TextViewAthletes>
                         Competidores
                     </TextViewAthletes>
-                    
                     <Athletes>
-                        <AthleteFrame>
+                        <AthleteFrame onPress={goToClass}>
                             <AthleteImage
                                 source={require('../assets/Alan.png')}
                             />
@@ -236,9 +237,8 @@ const JiuScreen = () => {
                             </DescriptionAthlete>
                         </AthleteFrame>
                     </Athletes>
-
                 </AthletesView>
-
+                
             </InnerContainer>
 
 
