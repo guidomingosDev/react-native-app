@@ -89,12 +89,16 @@ const AthleteVideoScreen = () => {
         }
     };
 
+    const getBackScreen = () => {
+        navigation.navigate('Jiu-Jitsu')
+    }
+
 
     return (
         <Container>
             <InnerContainer>
                 <AthleteName>
-                    <ArrowBackIcon>
+                    <ArrowBackIcon onPress={getBackScreen}>
                         <ArrowBack
                             source={require('../assets/arrow-left.png')}
                         />
@@ -160,7 +164,7 @@ const AthleteVideoScreen = () => {
                         </InputLabel>
                     </FilterComponent>
                     <InnerClass>
-                    <ScrollView>
+                    <ScrollView ScrollView vertical={true} showsVerticalScrollIndicator={false}>
                         <Class>
                             <TextInnerClassView>
                                 <TextClass>
