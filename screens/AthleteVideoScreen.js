@@ -67,7 +67,13 @@ import {
     TextInputView,
     TextInnerInput,
     DropDown,
-    DropDownIcon
+    DropDownIcon,
+    Class,
+    TextInnerClassView,
+    TextClass,
+    CategoryClass,
+    TextCategory,
+    InnerClass
 
 } from '../components/athleteVideoScreen'
 
@@ -147,17 +153,124 @@ const AthleteVideoScreen = () => {
                                 </Content>
                                 <DropDown>
                                     <DropDownIcon
-                                        source={require('../assets/arrow-left.png')}
+                                        source={require('../assets/chevron-down.jpg')}
                                     />
                                 </DropDown>
                             </Input>
                         </InputLabel>
                     </FilterComponent>
+                    <InnerClass>
+                    <ScrollView>
+                        <Class>
+                            <TextInnerClassView>
+                                <TextClass>
+                                    Estratégias Iniciais de Combate: Conhecendo o Jogo
+                                </TextClass>
+                            </TextInnerClassView>
+                            <CategoryClass>
+                                <TextCategory>
+                                    Finalização
+                                </TextCategory>
+                            </CategoryClass>
+                        </Class>
+                        <Class>
+                            <TextInnerClassView>
+                                <TextClass>
+                                Fundamentos Essenciais: Iniciando no Mundo das Quedas
+                                </TextClass>
+                            </TextInnerClassView>
+                            <CategoryClass>
+                                <TextCategory>
+                                    Queda
+                                </TextCategory>
+                            </CategoryClass>
+                        </Class>
+                        <Class>
+                            <TextInnerClassView>
+                                <TextClass>
+                                Transições Suaves para Iniciantes: Movimentos Básicos e Eficazes
+                                </TextClass>
+                            </TextInnerClassView>
+                            <CategoryClass>
+                                <TextCategory>
+                                    Raspagem
+                                </TextCategory>
+                            </CategoryClass>
+                        </Class>
+                        <Class>
+                            <TextInnerClassView>
+                                <TextClass>
+                                    Estratégias Iniciais de Combate: Conhecendo o Jogo
+                                </TextClass>
+                            </TextInnerClassView>
+                            <CategoryClass>
+                                <TextCategory>
+                                    Raspagem
+                                </TextCategory>
+                            </CategoryClass>
+                        </Class>
+                        <Class>
+                            <TextInnerClassView>
+                                <TextClass>
+                                Guarda Simplificada: Defesa Pessoal para Iniciantes
+                                </TextClass>
+                            </TextInnerClassView>
+                            <CategoryClass>
+                                <TextCategory>
+                                    Defesa Pessoal
+                                </TextCategory>
+                            </CategoryClass>
+                        </Class>
+                    </ScrollView>
+                    </InnerClass>
                 </Lessons>
             </InnerContainer>
 
+            <Menu>
+                <ItemBottomNavigation>
+                    <IconBottomNavigation
+                        source={require('../assets/li_clock.jpg')}
+                    />
+                    <TextItemNavigation>
+                        Histórico
+                    </TextItemNavigation>
+                </ItemBottomNavigation>
+                <ItemBottomNavigation>
+                    <IconBottomNavigation
+                        source={require('../assets/li_search.jpg')}
+                    />
+                    <TextItemNavigation>
+                        Pesquisar
+                    </TextItemNavigation>
+                </ItemBottomNavigation>
 
+                <ItemBottomNavigation>
+                    <HomeNavigation>
+                        <InnerHomeNavigation>
+                            <IconHomeNavigation
+                                source={require('../assets/home.png')}
+                            />
+                        </InnerHomeNavigation>
+                    </HomeNavigation>
+                </ItemBottomNavigation>
 
+                <ItemBottomNavigation>
+                    <IconBottomNavigation
+                        source={require('../assets/shopping-cart.jpg')}
+                    />
+                    <TextItemNavigation>
+                        Shopping
+                    </TextItemNavigation>
+                </ItemBottomNavigation>
+                <ItemBottomNavigation>
+                    <IconBottomNavigation
+                        source={require('../assets/li_user.jpg')}
+                    />
+                    <TextItemNavigation>
+                        Perfil
+                    </TextItemNavigation>
+                </ItemBottomNavigation>
+            </Menu>
         </Container>
     )
 }
