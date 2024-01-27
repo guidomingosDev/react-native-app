@@ -26,7 +26,7 @@ align-items: flex-start;
 gap: 10px;
 flex: 1 0 0;
 align-self: stretch;
-background-color: ${Colors.primary};
+background-color: ${Colors.prirmary};
 `;
 
 export const InnerContainer = styled.View`

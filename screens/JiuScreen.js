@@ -21,8 +21,6 @@ import {
     TextLive,
     TextPrincipal,
     AthletesView,
-
-
     Menu,
     ItemBottomNavigation,
     IconBottomNavigation,
@@ -41,7 +39,7 @@ import {
 
 } from '../components/jiuScreen'
 
-const HomeScreen = () => {
+const JiuScreen = () => {
 
     const navigation = useNavigation();
     const [selectedItem, setSelectedItem] = React.useState('Todos');
@@ -50,11 +48,8 @@ const HomeScreen = () => {
       setSelectedItem(item);
   
       if (item === 'Todos') {
-        // Navegar para a tela desejada (ajuste conforme a estrutura do seu projeto)
         navigation.navigate('Home');
       }
-  
-      // Adicione mais lógica conforme necessário para outras opções
     };
 
 
@@ -297,4 +292,4 @@ const HomeScreen = () => {
 }
 
 
-export default HomeScreen
+export default JiuScreen
